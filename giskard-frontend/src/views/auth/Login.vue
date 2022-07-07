@@ -1,11 +1,11 @@
 <template>
   <div style="width: 260px">
     <v-form @keyup.enter="submit">
-      <v-text-field @keyup.enter="submit" v-model="login" prepend-inner-icon="person" name="login" label="Ton blase mec" type="text" autocomplete="username" dense outlined></v-text-field>
+      <v-text-field @keyup.enter="submit" v-model="login" prepend-inner-icon="person" name="login" label="User ID or Email" type="text" autocomplete="username" dense outlined></v-text-field>
       <v-text-field @keyup.enter="submit" v-model="password" prepend-inner-icon="lock" name="password" label="Password" id="password" type="password" autocomplete="current-password" dense outlined></v-text-field>
     </v-form>
     <div class="d-flex justify-space-between align-center">
-      <v-btn block @click.prevent="submit" color="primary">Go go go</v-btn>
+      <v-btn block @click.prevent="submit" color="primary">Login</v-btn>
     </div>
     <div v-if="loginError" class="text-body-2 error--text mt-2">
       {{loginError}}
